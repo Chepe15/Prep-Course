@@ -161,22 +161,22 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
+  if (numero == 0)
+  {
+    return false;
+  } 
   if (numero > 0)
   {
-    return "Es Positivo";
-  } 
-  else if (numero < 0)
-  {
-    return "Es negativo";
-  } else  
-  return false;
+    return "Es positivo";
+  }
+  return "Es negativo";
   }
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código: 
-  var nuevaString = str + '!';
+  var nuevaString = (str + '!');
   return (nuevaString);
 }
 
@@ -194,7 +194,7 @@ function obtenerSaludo(nombre) {
   // Tu código:
   var nueva = 'Hola ';
   var unamas = '!';
-  return (nueva, + nombre, + unamas);
+  return (nueva + nombre + unamas);
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -236,8 +236,15 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra == "A")
-}
+  if (letra.length > 1 ){
+    return ("Dato incorrecto");
+  } if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"){
+    return ("Es vocal");
+  }  
+    return ("Dato incorrecto");
+  }
+  
+
 
 
 
